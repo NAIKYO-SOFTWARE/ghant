@@ -1,0 +1,20 @@
+.icon-footer{
+    width: 32px;
+    height: 32px;
+}
+
+.icon-footer:hover{
+    cursor: pointer; ;
+}
+
+.footer-container {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}

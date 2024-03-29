@@ -1,0 +1,26 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    background: radial-gradient(circle, #53a6da, #e590df);
+}
+
+.h1-before-login {
+    margin: 15px;
+    text-align: left;
+    color: black
+}
+
+p{
+    color: black;
+    margin-bottom: 50px;
+}
+
+.link-create-account{
+    color: black;
+    text-decoration: underline;
+}
+
+.link-create-account:hover{
+    color: antiquewhite;
+}
