@@ -11,6 +11,7 @@ function SuggestionsView() {
 
     let handleAddTodo = (todo) => {
         dispatch(addTodo(todo));
+        alert("Thêm vào danh sách thành công!")
     }
 
     let suggesList = [

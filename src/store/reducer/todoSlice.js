@@ -1,4 +1,5 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, current } from '@reduxjs/toolkit';
+import { v4 as uuidv4 } from 'uuid';
 
 const initialState = {
     todoList: JSON.parse(localStorage.getItem("todoList")) ?? []
@@ -8,11 +9,17 @@ export const todoSlice = createSlice({
     initialState,
     reducers: {
         addTodo: (state, action) => {
-            state.todoList.push(action.payload)
+            const id = uuidv4()
+            state.todoList.push({...action.payload, id})
             localStorage.setItem("todoList", JSON.stringify(state.todoList))
         },
         removeTodo: (state, action) => {
-            
+            const todos = [...current(state.todoList)]
+            let newTodoList = todos.filter((todo) => (
+                todo.id !== action.payload
+            ))
+            state.todoList = newTodoList
+            localStorage.setItem("todoList", JSON.stringify(state.todoList))
         }
     }
 });
