@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-    todoList: [localStorage.getItem("todoList")]
+    todoList: JSON.parse(localStorage.getItem("todoList")) ?? []
 };
 export const todoSlice = createSlice({
     name: 'todoList',
@@ -9,7 +9,7 @@ export const todoSlice = createSlice({
     reducers: {
         addTodo: (state, action) => {
             state.todoList.push(action.payload)
-            localStorage.setItem("todoList", state.todoList)
+            localStorage.setItem("todoList", JSON.stringify(state.todoList))
         },
         removeTodo: (state, action) => {
             

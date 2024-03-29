@@ -10,7 +10,6 @@ import { useSelector, useDispatch } from 'react-redux'
 function Home() {
   const navigate = useNavigate();
   const todoListData = useSelector(selectTodoList);
-  // console.log(todoListData.todoList);
 
   let handleClickAddChecklist = () => {
     navigate('/suggestions')
