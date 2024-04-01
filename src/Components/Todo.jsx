@@ -1,6 +1,7 @@
 import { useDispatch } from 'react-redux';
 import './todo.css';
 import { removeTodo } from '../store/reducer/todoSlice';
+import PropTypes from 'prop-types';
 
 function Todo({ content, icon, background, id}) {
     const dispatch = useDispatch();
@@ -18,6 +19,13 @@ function Todo({ content, icon, background, id}) {
                 <input type="checkbox" onClick={() => handleClearTodo(id)} />
             </div>
     );
+}
+
+Todo.propTypes = {
+    content: PropTypes.string,
+    icon: PropTypes.any,
+    background: PropTypes.string,
+    id: PropTypes.string
 }
 
 export default Todo

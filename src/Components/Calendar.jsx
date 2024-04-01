@@ -1,6 +1,8 @@
+import PropTypes from 'prop-types';
 import React from 'react';
-import './calendar.css';
 import Layout from './Layout';
+import './calendar.css';
+
 
 function Calendar({ date, day }) {
   let currentDay = new Date().getDate()
@@ -12,6 +14,11 @@ function Calendar({ date, day }) {
       </div>
     </Layout>
   );
+}
+
+Calendar.propTypes = {
+  date: PropTypes.date,
+  day: PropTypes.string
 }
 
 export default Calendar

@@ -13,7 +13,7 @@ export const userTaskSlice = createSlice({
                 state.userInfo = localStorage.getItem("userInfo")
             }
         },
-        removeUser: (state, action) => {
+        removeUser: (state) => {
             state.userInfo = null;
         }
     }

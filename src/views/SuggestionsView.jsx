@@ -1,13 +1,11 @@
-import { useNavigate} from "react-router-dom";
 import TodoSugges from "../Components/TodoSugges";
 import Layout from "../Components/Layout";
 import './css/suggestionsView.css'
-import { useSelector, useDispatch } from 'react-redux'
-import { selectTodoList, addTodo } from '../store/reducer/todoSlice'
+import { useDispatch } from 'react-redux'
+import { addTodo } from '../store/reducer/todoSlice'
 
 function SuggestionsView() {
     const dispatch = useDispatch();
-    let navigate = useNavigate()
 
     let handleAddTodo = (todo) => {
         dispatch(addTodo(todo));
