@@ -1,5 +1,5 @@
-import TodoSugges from '../Components/TodoSugges';
 import { useNavigate } from 'react-router-dom';
+import TodoSuggest from '../Components/Todo/TodoSuggest';
 
 function TodoView() {
   let todoList = [
@@ -22,10 +22,10 @@ function TodoView() {
       {todoList.map((todo) => {
         return (
           <div style={{ display: 'flex', alignItems: 'center' }} key={todo.id}>
-            <TodoSugges
+            <TodoSuggest
               content={todo.content}
               icon={todo.icon}
-              background={todo.background}></TodoSugges>
+              background={todo.background}></TodoSuggest>
           </div>
         );
       })}

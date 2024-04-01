@@ -1,4 +1,4 @@
-import './css/button.css';
+import '../../style/components/button.css';
 import PropTypes from 'prop-types';
 
 function Button({ text, onClick }) {

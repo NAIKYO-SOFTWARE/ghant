@@ -1,4 +1,4 @@
-import "./css/footer.css"
+import "../../style/components/footer.css"
 import { useNavigate } from "react-router-dom"
 
 function Footer() {

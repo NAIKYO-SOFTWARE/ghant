@@ -1,13 +1,13 @@
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
-import Home from '../Home'
+import Home from '../views/Home'
 import TodoView from '../views/TodoView'
-import Calendar from '../Components/Calendar'
+import Calendar from '../Components/Calendar/Calendar'
 import BeforeLoginView from '../views/BeforeLoginView'
 import LoginView from '../views/LoginView'
 import { selectTask } from '../store/reducer/userSlice'
 import { useSelector } from 'react-redux'
 import Profile from '../views/ProfileView'
-import SuggestionsView from '../views/SuggestionsView'
+import Suggest from '../views/Suggest'
 
 function App() {
   const { userInfo } = useSelector(selectTask);
@@ -30,7 +30,7 @@ const Authenticated = () => {
       <Route path='/' element={<Home />}></Route>
       <Route path='/checklist' element={<TodoView />}></Route>
       <Route path='/profile' element={<Profile />}></Route>
-      <Route path='/suggestions' element={<SuggestionsView />}></Route>
+      <Route path='/suggestions' element={<Suggest />}></Route>
       <Route path='/calendar' element={<Calendar />}></Route>
       <Route path='*' element={<></>}></Route>
     </Routes>

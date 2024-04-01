@@ -1,6 +1,6 @@
-import Button from "../Components/Button/Button"
 import { Link, useNavigate } from 'react-router-dom'
-import "./css/beforeLoginView.css"
+import Button from "../Components/Button/Button"
+import "../style/view/beforeLogin.css"
 
 function BeforeLoginView() {
     let navigate = useNavigate()

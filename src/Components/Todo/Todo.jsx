@@ -1,7 +1,7 @@
-import { useDispatch } from 'react-redux';
-import './todo.css';
-import { removeTodo } from '../store/reducer/todoSlice';
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { removeTodo } from '../../store/reducer/todoSlice';
+import "../../style/components/todo.css";
 
 function Todo({ content, icon, background, id}) {
     const dispatch = useDispatch();

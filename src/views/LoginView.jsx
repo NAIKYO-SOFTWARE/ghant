@@ -1,10 +1,9 @@
-import Button from '../Components/Button/Button';
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import './css/beforeLoginView.css';
-import {  useDispatch } from 'react-redux';
-import {  addUser } from '../store/reducer/userSlice';
-import './css/login.css';
+import Button from '../Components/Button/Button';
+import { addUser } from '../store/reducer/userSlice';
+import "../style/view/login.css";
 
 function LoginView() {
   const dispatch = useDispatch();

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import Layout from './Layout';
-import './calendar.css';
+import Layout from '../Layout';
+import "../../style/components/calendar.css"
 
 
 function Calendar({ date, day }) {
@@ -17,7 +17,7 @@ function Calendar({ date, day }) {
 }
 
 Calendar.propTypes = {
-  date: PropTypes.date,
+  date: PropTypes.number,
   day: PropTypes.string
 }
 

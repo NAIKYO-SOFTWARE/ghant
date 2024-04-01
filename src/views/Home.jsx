@@ -1,9 +1,9 @@
-import './home.css'
+import "../style/view/home.css"
 import { useNavigate } from 'react-router-dom'
-import Todo from './Components/Todo'
-import Header from './Components/Footer_Header/Header'
-import Layout from './Components/Layout'
-import { selectTodoList } from './store/reducer/todoSlice'
+import Todo from '../Components/Todo/Todo'
+import Header from '../Components/Header/Header'
+import Layout from '../Components/Layout'
+import { selectTodoList } from '../store/reducer/todoSlice'
 import { useSelector } from 'react-redux'
 
 function Home() {

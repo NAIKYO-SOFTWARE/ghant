@@ -1,7 +1,7 @@
-import './todoSugges.css';
+import "../../style/components/todoSuggest.css"
 import PropTypes from 'prop-types';
 
-function TodoSugges({ content, icon, background }) {
+function TodoSuggest({ content, icon, background }) {
   return (
     <>
       <div className="div" style={{ backgroundColor: background }}>
@@ -14,10 +14,10 @@ function TodoSugges({ content, icon, background }) {
   );
 }
 
-TodoSugges.propTypes = {
+TodoSuggest.propTypes = {
   content: PropTypes.string,
   icon: PropTypes.string,
   background: PropTypes.string
 };
 
-export default TodoSugges;
+export default TodoSuggest;

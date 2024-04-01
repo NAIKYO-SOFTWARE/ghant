@@ -1,10 +1,10 @@
-import TodoSugges from "../Components/TodoSugges";
+import TodoSuggest from "../Components/Todo/TodoSuggest";
 import Layout from "../Components/Layout";
-import './css/suggestionsView.css'
+import "../style/view/suggest.css"
 import { useDispatch } from 'react-redux'
 import { addTodo } from '../store/reducer/todoSlice'
 
-function SuggestionsView() {
+function Suggest() {
     const dispatch = useDispatch();
 
     let handleAddTodo = (todo) => {
@@ -25,7 +25,7 @@ function SuggestionsView() {
                 suggesList.map((todo, idx) => {
                     return (
                         <div style={{ display: 'flex', alignItems: 'center' }} key={idx} >
-                            <TodoSugges content={todo.content} icon={todo.icon} background={todo.background} ></TodoSugges>
+                            <TodoSuggest content={todo.content} icon={todo.icon} background={todo.background} ></TodoSuggest>
                             <button className='addButton' onClick={() => {handleAddTodo(todo)}}>
                                 +
                             </button>
@@ -37,4 +37,4 @@ function SuggestionsView() {
     )
 }
 
-export default SuggestionsView
+export default Suggest

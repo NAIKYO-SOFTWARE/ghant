@@ -1,4 +1,4 @@
-import Footer from "../Footer_Header/Footer";
+import Footer from "../Footer/Footer";
 import React from 'react';
 
 function Layout(props) {
